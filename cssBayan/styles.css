@@ -77,7 +77,7 @@ input+.content {
 
 input:checked+.content {
     height: 60vh;
-    padding: 5vh 0;
+    margin: 5% 0;
 }
 
 input {
