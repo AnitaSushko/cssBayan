@@ -12,22 +12,27 @@
 }
 
 body {
-	font-size: 16px;
-	font-family: Tahoma, Geneva, sans-serif;
-	max-width: 500px;
-	margin: 0 auto;
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    background-color: hsl(52deg 43% 69%);
 }
+
+main {
+    margin: 0 15%;
+}
+
 h1 {
-    font-size: 18px;
+    font-size: 2.5rem;
+    text-align: start;
+    margin: 0.5em 0;
+}
+
+h1+p {
     text-align: center;
-    margin: 20px 0 20px 0;
 }
 
-h1 + p {
-	text-align: center;
-}
-
-h1 + p a, .redly {
+h1+p a,
+.redly {
     background: #b93232;
     color: #FFF;
     text-decoration: none;
@@ -41,37 +46,40 @@ h1 + p a, .redly {
 
 /* NEEDED STYLES */
 label {
-    display: block;    
-	padding: 8px 22px;
+    display: block;
+    padding: 8px 22px;
     margin: 0 0 1px 0;
-	cursor: pointer;
-	background: #6AAB95;
-	border-radius: 3px;
-	color: #FFF;
-	transition: ease .5s;
+    cursor: pointer;
+    background: hsl(52deg 43% 80%);
+    border-radius: 3px;
+    color: black;
+    font-size: 1.5em;
+    transition: ease .5s;
 }
+
 label:hover {
-	background: #4E8774;
+    background: hsl(52deg 43% 80%);
 }
+
 .content {
-    background: #E2E5F6;
+    background: hsl(52deg 43% 69%);
     transition: 0.6s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: start;
 }
 
-input + .content {
-	max-height: unset;
+input+.content {
+    max-height: unset;
     height: 0;
     overflow: hidden;
 }
 
-input:checked + .content {
-	height: 60vh;
+input:checked+.content {
+    height: 60vh;
     padding: 5vh 0;
 }
 
 input {
-	display: none;
+    display: none;
 }
