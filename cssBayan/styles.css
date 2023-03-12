@@ -85,7 +85,7 @@ input:checked+label>.label-text>.icon {
 @media (hover:hover) {
 
     input:not(:checked)+label:hover {
-        color: hsl(246deg 82% 28%);
+        color: hsl(246deg 82% 38%);
     }
 
     label:hover,
