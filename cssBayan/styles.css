@@ -24,7 +24,7 @@ h1 {
 }
 
 .meme {
-    width: 100%;
+    width: 35%;
     object-fit: cover;
 }
 
@@ -53,7 +53,6 @@ label:hover {
 }
 
 .content {
-    background: hsl(52deg 43% 69%);
     transition: max-height 0.4s ease-in, margin 0.4s ease-in;
     display: flex;
     justify-content: center;
@@ -66,8 +65,7 @@ input+label>.content {
 }
 
 input:checked+label>.content {
-    max-height: 116vh;
-    margin: 5% 0;
+    max-height: 116vh;  
 }
 
 input {
@@ -98,7 +96,7 @@ input:checked+label>.label-text>.icon {
 
 @media screen and (min-width: 769px) {
     html {
-        font-size: 3.125vw;
+        font-size: 2.125vw;
     }
 }
 
@@ -106,10 +104,16 @@ input:checked+label>.label-text>.icon {
     html {
         font-size: 3vw;
     }
+    .meme {
+        width: 75%;
+    }
 }
 
 @media screen and (max-width: 480px) {
     html {
         font-size: 5vw;
+    }
+    .meme {
+        width: 80%;
     }
 }
