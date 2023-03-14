@@ -46,6 +46,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 2.5rem;
 }
 
 label:hover {
@@ -76,17 +77,30 @@ input {
     width: 2.125rem;
     height: 2.125rem;
     transition: 0.4s ease-in;
+    display: none;
 }
 
 input:checked+label>.label-text>.icon {
     transform: rotate(180deg);
 }
 
+input:checked+label>.label-text>span {
+    color: black
+}
+
 @media (hover:hover) {
 
-    input:not(:checked)+label:hover {
-        color: hsl(246deg 82% 38%);
-    }
+    main:hover span {
+        color: black; 
+     }
+     
+     main:hover .icon {
+        display: block;
+     }
+     
+     main:not(:hover) span {
+         color:hsl(246deg 82% 38%);
+     }   
 
     label:hover,
     .content:hover {
