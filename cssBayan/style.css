@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    background-color: hsl(52deg 43% 69%);
+}
+
+main {
+    margin: 0 15%;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: start;
+    margin: 0.5em 0;
+}
+
+.meme {
+    width: 35%;
+    object-fit: cover;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5em 0.6em;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    background: hsl(52deg 43% 80%);
+    border-radius: .25em;
+    color: black;
+    font-size: 1.2rem;
+    transition: ease .2s
+}
+
+.label-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 2.5rem;
+}
+
+
+.content {
+    transition: max-height 0.4s ease-in, margin 0.4s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+input+label>.content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+input:checked+label>.content {
+    max-height: 116vh;  
+}
+
+input {
+    display: none;
+}
+
+.icon {
+    width: 2.125rem;
+    height: 2.125rem;
+    transition: 0.4s ease-in;
+    display: none;
+}
+
+input:checked+label>.label-text>.icon {
+    transform: rotate(180deg);
+}
+
+input:checked+label>.label-text>span {
+    color: black
+}
+
+@media (hover:hover) {
+
+    label:hover {
+        background: hsl(52deg 43% 80%);
+    } 
+
+    main:hover span {
+        color: black; 
+     }
+     
+     main:hover .icon {
+        display: block;
+     }
+     
+     main:not(:hover) span {
+         color:hsl(246deg 82% 38%);
+     }   
+
+    label:hover,
+    .content:hover {
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    html {
+        font-size: 2.125vw;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    html {
+        font-size: 3vw;
+    }
+    .meme {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 5vw;
+    }
+    .meme {
+        width: 80%;
+    }
+}
